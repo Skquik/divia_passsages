@@ -14,7 +14,7 @@ exports.handler = async events => {
     setup(result.data)
     let data = []
     parser().map(res => {
-        let to = moment.utc(res.duree[0] ,"HH:mm").add(2, 'h')
+        let to = moment(res.duree[0] ,"HH:mm").add(2, 'h')
         console.log(to)
         let passage = {hour : res.duree[0], passage: now.to(to)}
         data.push(passage)
