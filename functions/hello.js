@@ -2,8 +2,8 @@ const api = require('../utils/api')
 const setup = require('../utils/parser').setup
 const parser = require('../utils/parser').parse
 const moment = require('moment')
+moment.tz('Europe/Paris')
 moment.locale('fr');
-
 
 exports.handler = async events => {
     let result = await api()
